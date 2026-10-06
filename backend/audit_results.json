@@ -1,0 +1,397 @@
+{
+  "section1_services": {
+    "backend": {
+      "status": "UP",
+      "code": 200,
+      "data": {
+        "status": "healthy",
+        "service": "Enterprise Knowledge Loss Detection & Preservation Platform",
+        "version": "1.0.0",
+        "timestamp": 1790830462.7738364
+      }
+    },
+    "frontend": {
+      "status": "UP",
+      "code": 200
+    }
+  },
+  "section2_user_journey": [
+    {
+      "step": "1. User Authentication (Login)",
+      "success": true,
+      "detail": ""
+    },
+    {
+      "step": "2. Dashboard Metrics Access",
+      "success": true,
+      "detail": ""
+    },
+    {
+      "step": "3. Realistic Document Upload",
+      "success": true,
+      "detail": "(doc_id: 34)"
+    },
+    {
+      "step": "4. Text Extraction & Chunking",
+      "success": true,
+      "detail": "(1 chunks created)"
+    },
+    {
+      "step": "5. NLP Pipeline (Keywords, NER, Topics)",
+      "success": true,
+      "detail": ""
+    },
+    {
+      "step": "6. Knowledge Record Creation",
+      "success": true,
+      "detail": "(knowledge_id: 53)"
+    },
+    {
+      "step": "7. Risk Engine Scoring",
+      "success": true,
+      "detail": "(Score: 86.5)"
+    },
+    {
+      "step": "8. ML Classification",
+      "success": true,
+      "detail": "(Class: critical)"
+    },
+    {
+      "step": "9. Preservation Recommendations Triggered",
+      "success": true,
+      "detail": "(86 actions)"
+    },
+    {
+      "step": "10. Semantic Vector Retrieval",
+      "success": true,
+      "detail": "(10 hits found)"
+    },
+    {
+      "step": "11. View Knowledge Details",
+      "success": true,
+      "detail": ""
+    },
+    {
+      "step": "12. User Logout",
+      "success": true,
+      "detail": ""
+    }
+  ],
+  "section3_api_endpoints": [
+    {
+      "endpoint": "/auth/login",
+      "method": "POST",
+      "expected": "200 + access_token",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/auth/login",
+      "method": "POST",
+      "expected": "401 Unauthorized",
+      "actual": "401",
+      "status_code": 401,
+      "pass": true
+    },
+    {
+      "endpoint": "/auth/me (bad token)",
+      "method": "GET",
+      "expected": "401 Unauthorized",
+      "actual": "401",
+      "status_code": 401,
+      "pass": true
+    },
+    {
+      "endpoint": "/auth/me (no token)",
+      "method": "GET",
+      "expected": "401 Unauthorized",
+      "actual": "401",
+      "status_code": 401,
+      "pass": true
+    },
+    {
+      "endpoint": "/audit/logs (as employee)",
+      "method": "GET",
+      "expected": "403 Forbidden",
+      "actual": "403",
+      "status_code": 403,
+      "pass": true
+    },
+    {
+      "endpoint": "/auth/me",
+      "method": "GET",
+      "expected": "200 + user info",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/documents/upload (PDF)",
+      "method": "POST",
+      "expected": "202 Accepted",
+      "actual": "202",
+      "status_code": 202,
+      "pass": true
+    },
+    {
+      "endpoint": "/documents/upload (DOCX)",
+      "method": "POST",
+      "expected": "202 Accepted",
+      "actual": "202",
+      "status_code": 202,
+      "pass": true
+    },
+    {
+      "endpoint": "/documents/upload (empty)",
+      "method": "POST",
+      "expected": "400 Bad Request",
+      "actual": "400",
+      "status_code": 400,
+      "pass": true
+    },
+    {
+      "endpoint": "/documents/upload (corrupt)",
+      "method": "POST",
+      "expected": "400 Bad Request",
+      "actual": "400",
+      "status_code": 400,
+      "pass": true
+    },
+    {
+      "endpoint": "/documents/upload (.exe)",
+      "method": "POST",
+      "expected": "400 Bad Request",
+      "actual": "400",
+      "status_code": 400,
+      "pass": true
+    },
+    {
+      "endpoint": "/documents/upload (>50MB)",
+      "method": "POST",
+      "expected": "413 Payload Too Large",
+      "actual": "413",
+      "status_code": 413,
+      "pass": true
+    },
+    {
+      "endpoint": "/documents",
+      "method": "GET",
+      "expected": "200 + list",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/documents/32",
+      "method": "GET",
+      "expected": "200 + detail",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/risk/dashboard",
+      "method": "GET",
+      "expected": "200 + metrics",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/risk/simulate",
+      "method": "POST",
+      "expected": "200 + simulated score",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/ml/metrics",
+      "method": "GET",
+      "expected": "200 + metrics",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/ml/predict",
+      "method": "POST",
+      "expected": "200 + prediction",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/knowledge",
+      "method": "POST",
+      "expected": "201 Created",
+      "actual": "201",
+      "status_code": 201,
+      "pass": true
+    },
+    {
+      "endpoint": "/risk/analyze/53",
+      "method": "POST",
+      "expected": "200 + score",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/search",
+      "method": "GET",
+      "expected": "200 + results",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/knowledge/53",
+      "method": "GET",
+      "expected": "200 + details",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    },
+    {
+      "endpoint": "/auth/logout",
+      "method": "POST",
+      "expected": "200 Success",
+      "actual": "200",
+      "status_code": 200,
+      "pass": true
+    }
+  ],
+  "section4_auth": {
+    "valid_login": {
+      "status": 200,
+      "passed": true
+    },
+    "invalid_login": {
+      "status": 401,
+      "passed": true
+    },
+    "invalid_token": {
+      "status": 401,
+      "passed": true
+    },
+    "no_token": {
+      "status": 401,
+      "passed": true
+    },
+    "role_restriction": {
+      "status": 403,
+      "passed": true
+    }
+  },
+  "section5_doc_processing": {
+    "valid_pdf": {
+      "status": 202,
+      "passed": true,
+      "chunks": 1
+    },
+    "valid_docx": {
+      "status": 202,
+      "passed": true,
+      "chunks": 1
+    },
+    "empty_document": {
+      "status": 400,
+      "passed": true
+    },
+    "corrupted_document": {
+      "status": 400,
+      "passed": true
+    },
+    "unsupported_file": {
+      "status": 400,
+      "passed": true
+    },
+    "oversized_file": {
+      "status": 413,
+      "passed": true
+    },
+    "duplicate_upload": {
+      "status": 202,
+      "passed": true
+    }
+  },
+  "section6_nlp": {
+    "preprocessing": true,
+    "chunking": true,
+    "keyword_extraction": true,
+    "ner": true,
+    "topic_extraction": true,
+    "embeddings_384d": true
+  },
+  "section7_risk_math": {
+    "formula_verified": "C*0.30 + U*0.25 + D*0.20 + G*0.15 + A*0.10",
+    "all_test_cases_passed": true
+  },
+  "section8_ml": {
+    "model_loaded": true,
+    "empirical_accuracy": 0.9905,
+    "empirical_f1": 0.9142,
+    "sla_satisfied": true,
+    "inference_working": true
+  },
+  "section9_semantic_search": [
+    {
+      "query": "legacy payment system failover procedure",
+      "top_hit": "Legacy Payment Processing System Administration",
+      "matched": true
+    },
+    {
+      "query": "Kubernetes cluster configuration failover",
+      "top_hit": "Kubernetes Microservices Deployment Pipeline",
+      "matched": true
+    },
+    {
+      "query": "AWS database migration replication",
+      "top_hit": "AWS RDS Database Migration and Continuous Replication",
+      "matched": true
+    }
+  ],
+  "section10_preservation": {
+    "high_doc_gap_recs": [
+      "Draft comprehensive technical architecture and troubleshooting runbooks.",
+      "Record interactive screen walkthroughs of critical deployment and recovery workflows.",
+      "Implement automated failover mechanisms and architectural isolation to reduce systemic dependency.",
+      "Conduct disaster recovery tabletop exercises to validate knowledge documentation."
+    ],
+    "high_uniqueness_recs": [
+      "Designate at least two secondary backup experts for paired knowledge transfer.",
+      "Schedule structured weekly 2-hour knowledge handover sessions over the next 30 days.",
+      "Implement automated failover mechanisms and architectural isolation to reduce systemic dependency.",
+      "Conduct disaster recovery tabletop exercises to validate knowledge documentation.",
+      "Accelerate succession planning and cross-departmental mentoring before planned departures."
+    ],
+    "recommendations_adapt": true
+  },
+  "section11_security": {
+    "sql_injection": {
+      "payload": "1%20OR%201=1",
+      "status": 422,
+      "safe": true
+    },
+    "xss_test": {
+      "status": 201,
+      "safe": true
+    },
+    "bcrypt_hashing": {
+      "prefix": "$2b$12$",
+      "safe": true
+    },
+    "cors": {
+      "header": "http://127.0.0.1:5173",
+      "configured": true
+    }
+  },
+  "section12_performance": {
+    "api_latency_ms": 3.51,
+    "search_latency_ms": 48.1,
+    "nlp_pipeline_latency_ms": 3.46
+  },
+  "failures": []
+}

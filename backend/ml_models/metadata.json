@@ -1,0 +1,248 @@
+{
+  "best_model_name": "Random Forest",
+  "version": "1.0.0",
+  "trained_at": "2026-09-22T03:59:02.237474+00:00",
+  "test_samples": 105,
+  "metrics": {
+    "model_name": "Random Forest",
+    "model_type": "random_forest",
+    "version": "1.0.0",
+    "accuracy": 0.9905,
+    "precision": 0.9951,
+    "recall": 0.875,
+    "f1_score": 0.9142,
+    "cv_f1_mean": 0.8691,
+    "confusion_matrix": [
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        26,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        27
+      ]
+    ],
+    "feature_importances": {
+      "criticality": 0.2068,
+      "uniqueness": 0.2831,
+      "dependency": 0.1554,
+      "documentation_gap": 0.157,
+      "availability_risk": 0.0962,
+      "num_experts": 0.0427,
+      "num_systems": 0.016,
+      "doc_length": 0.0428
+    },
+    "is_active": true,
+    "trained_at": "2026-09-22T03:59:00.038435+00:00"
+  },
+  "all_models": [
+    {
+      "model_name": "Random Forest",
+      "model_type": "random_forest",
+      "version": "1.0.0",
+      "accuracy": 0.9905,
+      "precision": 0.9951,
+      "recall": 0.875,
+      "f1_score": 0.9142,
+      "cv_f1_mean": 0.8691,
+      "confusion_matrix": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          50,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          26,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          27
+        ]
+      ],
+      "feature_importances": {
+        "criticality": 0.2068,
+        "uniqueness": 0.2831,
+        "dependency": 0.1554,
+        "documentation_gap": 0.157,
+        "availability_risk": 0.0962,
+        "num_experts": 0.0427,
+        "num_systems": 0.016,
+        "doc_length": 0.0428
+      },
+      "is_active": true,
+      "trained_at": "2026-09-22T03:59:00.038435+00:00"
+    },
+    {
+      "model_name": "Gradient Boosting",
+      "model_type": "gradient_boosting",
+      "version": "1.0.0",
+      "accuracy": 0.981,
+      "precision": 0.87,
+      "recall": 0.87,
+      "f1_score": 0.87,
+      "cv_f1_mean": 0.8863,
+      "confusion_matrix": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          49,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          26,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          27
+        ]
+      ],
+      "feature_importances": {
+        "criticality": 0.324,
+        "uniqueness": 0.1349,
+        "dependency": 0.1548,
+        "documentation_gap": 0.3845,
+        "availability_risk": 0.0001,
+        "num_experts": 0.0001,
+        "num_systems": 0.0014,
+        "doc_length": 0.0002
+      },
+      "is_active": false,
+      "trained_at": "2026-09-22T03:59:02.091288+00:00"
+    },
+    {
+      "model_name": "Decision Tree",
+      "model_type": "decision_tree",
+      "version": "1.0.0",
+      "accuracy": 0.9619,
+      "precision": 0.8073,
+      "recall": 0.86,
+      "f1_score": 0.8231,
+      "cv_f1_mean": 0.8702,
+      "confusion_matrix": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          47,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          26,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          27
+        ]
+      ],
+      "feature_importances": {
+        "criticality": 0.4234,
+        "uniqueness": 0.5545,
+        "dependency": 0.0032,
+        "documentation_gap": 0.0107,
+        "availability_risk": 0.0082,
+        "num_experts": 0.0,
+        "num_systems": 0.0,
+        "doc_length": 0.0
+      },
+      "is_active": false,
+      "trained_at": "2026-09-22T03:59:02.115294+00:00"
+    },
+    {
+      "model_name": "Logistic Regression",
+      "model_type": "logistic_regression",
+      "version": "1.0.0",
+      "accuracy": 0.981,
+      "precision": 0.7404,
+      "recall": 0.75,
+      "f1_score": 0.7451,
+      "cv_f1_mean": 0.7448,
+      "confusion_matrix": [
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          50,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          26,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          27
+        ]
+      ],
+      "feature_importances": {
+        "criticality": 1.4472,
+        "uniqueness": 1.2214,
+        "dependency": 1.2314,
+        "documentation_gap": 1.0459,
+        "availability_risk": 0.942,
+        "num_experts": 0.7596,
+        "num_systems": 0.6697,
+        "doc_length": 0.6056
+      },
+      "is_active": false,
+      "trained_at": "2026-09-22T03:59:02.219926+00:00"
+    }
+  ]
+}

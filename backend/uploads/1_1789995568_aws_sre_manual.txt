@@ -1,0 +1,6 @@
+AWS Cloud Infrastructure and Microservices Deployment Guide.
+This document details the configuration for Amazon Web Services EC2 and RDS instances.
+Written by Arun Kumar and maintained by the DevOps SRE team.
+Step 1: Authenticate with IAM credentials.
+Step 2: Deploy container images using Docker and Kubernetes.
+Step 3: Verify PostgreSQL database connectivity.

@@ -1,0 +1,86 @@
+[
+  {
+    "step": 1,
+    "name": "Login",
+    "status": "PASS",
+    "details": "Authenticated as admin@techcorp.com in 249.95ms (JWT token issued)"
+  },
+  {
+    "step": 2,
+    "name": "Upload PDF/DOCX",
+    "status": "PASS",
+    "details": "Uploaded academic_verification_doc.pdf in 2640.77ms -> document_id: 31"
+  },
+  {
+    "step": 3,
+    "name": "Extract text",
+    "status": "PASS",
+    "details": "Extracted text via PyMuPDF (1 chunks). Preview: 'Core Settlement Gateway Microservices Operational Runbook. Author: Rajesh Kumar....'"
+  },
+  {
+    "step": 4,
+    "name": "NLP Preprocessing",
+    "status": "PASS",
+    "details": "Cleaned & tokenized (51 tokens, lowercase, stopwords removed). Tokens: ['core', 'settlement', 'gateway', 'microservices', 'operational', 'runbook']"
+  },
+  {
+    "step": 5,
+    "name": "Keyword Extraction",
+    "status": "PASS",
+    "details": "Hybrid TF-IDF + domain extracted top terms: ['runbook', 'redis', 'kubernetes', 'failover', 'core']"
+  },
+  {
+    "step": 6,
+    "name": "NER Extraction",
+    "status": "PASS",
+    "details": "Identified 5 entities with types: [('AWS', 'TECHNOLOGY'), ('Kubernetes', 'TECHNOLOGY'), ('Redis', 'TECHNOLOGY'), ('failover', 'PROCESS'), ('Rajesh Kumar', 'PERSON')]"
+  },
+  {
+    "step": 7,
+    "name": "Topic Extraction",
+    "status": "PASS",
+    "details": "Primary topic classified: 'Cloud Infrastructure' (Ranked: ['Cloud Infrastructure', 'Database Administration', 'DevOps & Deployment'])"
+  },
+  {
+    "step": 8,
+    "name": "Knowledge Record Creation",
+    "status": "PASS",
+    "details": "Created KnowledgeItem id: 48 title: 'Core Settlement Gateway Disaster Recovery Protocol'"
+  },
+  {
+    "step": 9,
+    "name": "Risk Calculation",
+    "status": "PASS",
+    "details": "Calculated in 35.33ms: Score=87.5 (critical). Expected=87.5. Exact match: True"
+  },
+  {
+    "step": 10,
+    "name": "ML Prediction",
+    "status": "PASS",
+    "details": "Random Forest inference in 25.51ms -> Level: 'critical' (Confidence: 100.0%, Model: RandomForestClassifier)"
+  },
+  {
+    "step": 11,
+    "name": "Embedding Generation",
+    "status": "PASS",
+    "details": "Generated 384-dim vector in 0.54ms (L2 normalized magnitude=1.0000)"
+  },
+  {
+    "step": 12,
+    "name": "Semantic Search",
+    "status": "PASS",
+    "details": "Queried in 51.97ms -> 5 hits retrieved. Top hit: 'academic_verification_doc.pdf' (Score: 0.3142)"
+  },
+  {
+    "step": 13,
+    "name": "Preservation Recommendation",
+    "status": "PASS",
+    "details": "Generated 7 targeted actions based on risk profile: 'Designate at least two secondary backup experts for paired knowledge transfer.'"
+  },
+  {
+    "step": 14,
+    "name": "Dashboard",
+    "status": "PASS",
+    "details": "Retrieved in 11.7ms -> Total Assets: 48, Critical: 8, High: 28, Avg Score: 76.46"
+  }
+]
